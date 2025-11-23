@@ -5,7 +5,6 @@ export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Add shadow only when scrolled
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
@@ -23,24 +22,31 @@ export const Navbar: React.FC = () => {
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-white/80 backdrop-blur-md shadow-md border-b border-brand-secondary/10 py-2' 
-        : 'bg-white py-4 border-b border-transparent'
+        // REDUCED PADDING: py-2 when scrolled (was py-4)
+        ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-brand-secondary/10 py-2' 
+        // REDUCED PADDING: py-3 when at top (was py-6)
+        : 'bg-white py-3 border-b border-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+        {/* Container Height: h-20 (5rem) provides a good base */}
+        <div className="flex justify-between items-center h-20">
+          
+          {/* Logo & Text Section */}
+          <div className="flex-shrink-0 flex items-center gap-4 cursor-pointer group overflow-visible">
+            {/* BIGGER LOGO IMAGE: h-28 and scale-150 */}
             <img 
-              src="/Asians.png" 
+              src="/Asians_trans.png" 
               alt="AAFCS Logo" 
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-28 w-auto object-contain scale-150 transition-transform duration-300 group-hover:scale-[1.6]"
             />
-            <div className="flex flex-col justify-center">
+            
+            {/* Text Block */}
+            <div className="flex flex-col justify-center leading-none -ml-1">
                <div className="flex items-baseline gap-1.5">
-                  <span className="font-bold text-xl tracking-tight text-brand-primary leading-none">Asians</span>
-                  <span className="font-serif italic text-lg text-brand-secondary leading-none">for</span>
+                  <span className="font-bold text-2xl tracking-tight text-brand-primary">Asians</span>
+                  <span className="font-serif italic text-xl text-brand-secondary">for</span>
                </div>
-               <span className="font-bold text-xl tracking-tight text-brand-primary leading-none">Climate Solutions</span>
+               <span className="font-bold text-2xl tracking-tight text-brand-primary -mt-1">Climate Solutions</span>
             </div>
           </div>
           
@@ -50,7 +56,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-brand-dark/80 hover:text-brand-secondary font-medium transition-colors duration-200 text-sm tracking-wide relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-brand-secondary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full"
+                className="text-brand-dark/80 hover:text-brand-secondary font-medium transition-colors duration-200 text-sm tracking-wide"
               >
                 {link.name}
               </a>

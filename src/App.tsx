@@ -1,5 +1,4 @@
 import React from 'react';
-// 👇 THESE ARE THE CORRECTED LINES
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
@@ -21,13 +20,13 @@ function App() {
         {/* Mission / Intro Section */}
         <section className="py-24 px-4 bg-brand-light" id="about">
             <div className="max-w-4xl mx-auto text-center">
-                <span className="text-brand-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Our Mission</span>
+                <span className="text-brand-secondary font-bold tracking-widest uppercase text-sm mb-4 block">About Us</span>
                 <h2 className="text-3xl md:text-5xl font-extrabold text-brand-primary mb-8 leading-tight">
-                    Mobilising the power of Australia's diversity for a safe climate.
+                    Harnessing the unique strength of diverse Asian Australian communities to fight climate change.
                 </h2>
                 <div className="w-24 h-1 bg-brand-secondary mx-auto mb-8 rounded-full"></div>
                 <p className="text-lg md:text-xl text-brand-grey leading-relaxed font-light">
-                    AAFCS is the leading network for Asian-Australians committed to climate action. 
+                    We are a movement dedicated to bridging the gap between Asian-Australian communities and climate action. 
                     We recognise that the impacts of climate change are felt disproportionately in our region, 
                     and that our diverse communities hold the key to innovative, resilient solutions.
                 </p>

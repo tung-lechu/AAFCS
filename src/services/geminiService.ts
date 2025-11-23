@@ -1,14 +1,18 @@
-import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 
-// Initialize Gemini Client
-// Note: API_KEY is expected to be in process.env.API_KEY
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Safe initialization: Check if key exists before creating client
+const apiKey = process.env.API_KEY || ''; 
+const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 export const streamChatResponse = async (
   message: string,
   history: { role: 'user' | 'model'; parts: { text: string }[] }[]
-): Promise<AsyncGenerator<GenerateContentResponse, void, unknown>> => {
+) => {
   
+  if (!ai) {
+    throw new Error("API Key not configured. Please add GEMINI_API_KEY to your .env file.");
+  }
+
   const systemInstruction = `You are the AAFCS Virtual Assistant. AAFCS stands for Asian Australians for Climate Solutions. 
   Your goal is to help users understand our mission to empower multicultural communities to lead on climate action.
   

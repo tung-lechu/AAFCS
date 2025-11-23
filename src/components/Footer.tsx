@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">AAFCS</h3>
             <p className="text-brand-light/80 text-sm leading-relaxed max-w-xs">
-              Asian Australians for Climate Solutions. Building a resilient, inclusive future where every community leads on climate action.
+              Asian Australians for Climate Solutions is a registered Australian charity with DGR1 status (ABN: 54670124348).
             </p>
             <div className="flex space-x-4 pt-2">
                 <a href="#" className="text-brand-light/70 hover:text-brand-accent transition-colors"><Facebook className="h-5 w-5" /></a>
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
               <li><a href="#people" className="text-brand-light/70 hover:text-white transition-colors text-sm">Our People</a></li>
               <li><a href="#impact" className="text-brand-light/70 hover:text-white transition-colors text-sm">Our Impact</a></li>
               <li><a href="#advocacy" className="text-brand-light/70 hover:text-white transition-colors text-sm">Advocacy & Policy</a></li>
-              <li><a href="#events" className="text-brand-light/70 hover:text-white transition-colors text-sm">Upcoming Events</a></li>
+              <li><a href="#events" className="text-brand-light/70 hover:text-white transition-colors text-sm">Future Events</a></li>
             </ul>
           </div>
 
@@ -37,24 +37,26 @@ export const Footer: React.FC = () => {
            <div>
             <h3 className="text-sm font-bold text-brand-accent uppercase tracking-wider mb-6">Get Involved</h3>
             <ul className="space-y-3">
-              <li><a href="#volunteer" className="text-brand-light/70 hover:text-white transition-colors text-sm">Volunteer</a></li>
-              <li><a href="#partner" className="text-brand-light/70 hover:text-white transition-colors text-sm">Partner With Us</a></li>
+              <li><a href="#volunteer" className="text-brand-light/70 hover:text-white transition-colors text-sm">Volunteers</a></li>
+              <li><a href="#code-of-care" className="text-brand-light/70 hover:text-white transition-colors text-sm">Codes of Care</a></li>
               <li><a href="#donate" className="text-brand-light/70 hover:text-white transition-colors text-sm">Donate</a></li>
-              <li><a href="#subscribe" className="text-brand-light/70 hover:text-white transition-colors text-sm">Newsletter</a></li>
+              <li><a href="#contact" className="text-brand-light/70 hover:text-white transition-colors text-sm">Contact Us</a></li>
             </ul>
           </div>
 
           {/* Acknowledgement */}
           <div>
-            <h3 className="text-sm font-bold text-brand-accent uppercase tracking-wider mb-6">Acknowledgement</h3>
-            <p className="text-brand-light/70 text-sm leading-relaxed">
-               We acknowledge the Traditional Custodians of the lands on which we live and work. We pay our respects to Elders past and present. We recognise their continuing connection to land, waters and culture.
+            <h3 className="text-sm font-bold text-brand-accent uppercase tracking-wider mb-6">Acknowledgement of Country</h3>
+            <p className="text-brand-light/70 text-xs leading-relaxed">
+               We acknowledge all the First Nations and First Nations Peoples. This land is, and always will be, unceded Aboriginal land.
+               <br/><br/>
+               We recognise that as migrant communities, our opportunities and livelihoods in Australia exist because of colonisation, and with that comes responsibility. We honour the enduring custodianship of First Nations people, who have cared for Country for more than 65,000 years.
             </p>
           </div>
         </div>
         
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-light/50">
-          <p>&copy; {new Date().getFullYear()} AAFCS. All rights reserved. ABN 12 345 678 901.</p>
+          <p>&copy; {new Date().getFullYear()} AAFCS.AU. All rights reserved. Registered Charity.</p>
           <div className="flex space-x-6">
               <a href="#" className="hover:text-white">Privacy Policy</a>
               <a href="#" className="hover:text-white">Terms of Service</a>
