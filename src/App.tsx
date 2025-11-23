@@ -1,4 +1,5 @@
 import React from 'react';
+// 👇 THESE ARE THE CORRECTED LINES
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
